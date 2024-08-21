@@ -1,6 +1,6 @@
 import { Box, ChakraProvider, Heading, theme } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
-import SideNav from "./SideNav";
+import Header from "./Header";
 import "../index.css";
 import { useLocation } from "react-router-dom";
 import Page from "./Page";
@@ -10,8 +10,8 @@ export const App = () => {
   console.log(location);
   return (
     <ChakraProvider theme={theme}>
-      <Box className="app-container" display={"flex"}>
-        <SideNav />
+      <Box className="app-container">
+        <Header />
         {location.pathname === "/" && (
           <Page>
             <Box
@@ -22,11 +22,11 @@ export const App = () => {
               justifyContent={"center"}
               alignItems={"center"}
             >
-              <Heading color={"green"} size={"2xl"} margin={"10px"}>
+              <Heading className={'app-welcome'} color={"green"} size={"2xl"} margin={"10px"}>
                 Welcome to Finance Assistant
               </Heading>
               <Heading size={""} margin={"10px"}>
-                Please choose an option from sidebar to begin...
+                Please choose an option from the tabs to begin...
               </Heading>
             </Box>
           </Page>
