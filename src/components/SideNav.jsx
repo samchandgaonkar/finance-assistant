@@ -4,18 +4,23 @@ import logo from "../logo.svg";
 
 function SideNav() {
   return (
-    <Box className="sidebar" borderRight={"0.5px solid blue"} height={"100vh"}>
+    <Box
+      w={"400px"}
+      className="sidebar"
+      borderRight={"0.5px solid blue"}
+      height={"100vh"}
+    >
       <Box
         className="logo"
         bgColor={"blue"}
         color={"#fff"}
-        maxW={"300px"}
+        maxW={"400px"}
         h={"40px"}
         display={"flex"}
         alignItems={"center"}
       >
         <Image w={"40px"} src={logo} alt="logo" />
-        <Heading size={''}>Finance Assistant</Heading>
+        <Heading size={""}>Finance Assistant </Heading>
       </Box>
       <Menu
         as="ul"
@@ -33,6 +38,9 @@ function SideNav() {
         </MenuItem>
         <MenuItem>
           <Link to={"/repayment"}>Early Pay Off Calculator</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to={"/"}>🏠︎ Back to Home</Link>
         </MenuItem>
       </Menu>
     </Box>

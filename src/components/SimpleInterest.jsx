@@ -26,7 +26,7 @@ function SimpleInterest(props) {
       </Box>
       <Box className="page-content">
         <Box className="page-row">
-          <FormLabel>Tenure : {tenure} </FormLabel>
+          <FormLabel>Tenure in years : {tenure} </FormLabel>
           <RangeSlider 
             aria-label={["min", "max"]}
             defaultValue={[0, 0]}
