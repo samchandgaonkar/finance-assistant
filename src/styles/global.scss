@@ -1,0 +1,130 @@
+a {
+  text-decoration: none;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app-sidebar {
+  width: 300px;
+  height: 100vh;
+  background: radial-gradient(
+    circle at -1% 57.5%,
+    rgb(19, 170, 82) 0%,
+    rgb(0, 102, 43) 90%
+  );
+  color: white;
+  box-shadow: black 3px 2px 20px;
+  position: relative;
+  z-index: 10;
+  .navbar-nav {
+    margin-top: 20px;
+    .nav-item {
+      margin: 2px 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding-left: 15px;
+    }
+  }
+  .logo-wrapper {
+    padding-left: 10px;
+    border-bottom: 0.5px solid white;
+    padding-bottom: 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    .app-logo {
+      max-width: fit-content;
+      img {
+        width: 48px;
+        height: auto;
+        filter: drop-shadow(2px 4px 6px black);
+      }
+    }
+    .app-name {
+      max-width: 300px;
+      margin-left: 15px;
+      text-shadow: 2px 2px 2px black;
+      padding-top: 10px;
+      color: white;
+    }
+  }
+  .nav-link {
+    &:hover {
+      text-shadow: 2px 3px 2px black;
+    }
+  }
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+
+  .app-page {
+    display: flex;
+    width: calc(100% - 320px);
+    background-size: cover;
+
+    .app-welcome {
+      color: green;
+    }
+    h5 {
+      padding-left: 5px;
+    }
+    &:has(.app-welcome) {
+      justify-content: center;
+      align-items: center;
+    }
+    .app-page-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: underline;
+      height: 60px;
+      width: 100%;
+    }
+    .app-page-content {
+      height: 90vh;
+    }
+  }
+}
+
+.card {
+  background-color: lightcyan;
+  min-height: 400px;
+  .card-header {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    background: radial-gradient(
+      circle at -1% 57.5%,
+      rgb(19, 170, 82) 0%,
+      rgb(0, 102, 43) 90%
+    );
+  }
+}
+.input-range-wrapper {
+  background-color: rgba(15,15,15, 0.2);
+  margin : 5px 0 15px 0;
+  padding: 15px 0;
+  label {
+    font-weight: bolder;
+  }
+  input[type="range"] {
+    width: 100%;
+  }
+  input[type="number"] {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.loan-calculations {
+  li {
+    list-style-type: square;
+  }
+}
+
+.output-wrapper {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

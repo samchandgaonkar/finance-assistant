@@ -1,39 +1,27 @@
-import { Box, ChakraProvider, Heading, theme } from "@chakra-ui/react";
+import "../styles/_reset.scss";
+import "bootstrap/dist/css/bootstrap.css";
+import "../styles/global.scss";
+
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
-import "../index.css";
 import { useLocation } from "react-router-dom";
 import Page from "./Page";
+import Sidebar from "./Sidebar";
 
 export const App = () => {
   const location = useLocation();
   console.log(location);
   return (
-    <ChakraProvider theme={theme}>
-      <Box className="app-container">
-        <Header />
-        {location.pathname === "/" && (
-          <Page>
-            <Box
-              height={"100%"}
-              w={"100%"}
-              display={"flex"}
-              flexDir={"column"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <Heading className={'app-welcome'} color={"green"} size={"2xl"} margin={"10px"}>
-                Welcome to Finance Assistant
-              </Heading>
-              <Heading size={""} margin={"10px"}>
-                Please choose an option from the tabs to begin...
-              </Heading>
-            </Box>
-          </Page>
-        )}
-
-        <Outlet />
-      </Box>
-    </ChakraProvider>
+    <div className="app-container">
+      <Sidebar />
+      {location.pathname === "/" && (
+        <Page>
+          <div>
+            <h1 className={"app-welcome"}>Welcome to Finance Assistant</h1>
+            <h5>Please choose an option from the sidebar to begin...</h5>
+          </div>
+        </Page>
+      )}
+      <Outlet />
+    </div>
   );
 };

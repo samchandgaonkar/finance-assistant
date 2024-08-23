@@ -1,7 +1,6 @@
-import { Box } from "@chakra-ui/react";
 import React from "react";
 function Page(props) {
-  return <Box className="page-container">{props.children}</Box>;
+  return <div className="app-page">{props.children}</div>;
 }
 
 export default Page;

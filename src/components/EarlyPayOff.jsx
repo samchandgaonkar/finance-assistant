@@ -1,12 +1,9 @@
-import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 function EarlyPayOff(props) {
   return (
-    <Box className="page-heading">
-      <Heading size={""} display={"flex"} alignItems={"center"}>
-        Early Pay Off Calculator
-      </Heading>
-    </Box>
+    <div className="app-page-title">
+      <h4>Early Pay Off Calculator</h4>
+    </div>
   );
 }
 
